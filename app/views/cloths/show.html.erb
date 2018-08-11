@@ -1,0 +1,7 @@
+<h1>Cloths#show</h1>
+<p>Find me in app/views/cloths/show.html.erb</p>
+<table>
+  <tr>
+    <td><%= image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id => @cloth.id))%></td></tr>
+</table>
+<p><%= link_to '一覧に戻る', cloths_url %></p>

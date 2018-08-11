@@ -1,0 +1,82 @@
+<h1>Cloths#index</h1>
+<p>Find me in app/views/cloths/index.html.erb</p>
+<!-- <p><%= link_to 'アイテムの登録', new_cloth_path %></p> -->
+<table>
+	<div class = "main">
+
+			<div class = "top">
+				<div class = "color">
+					<ul>
+						<li class = "block block-white"><a herf = "#"></a></li>
+						<li class = "block block-black"><a herf = "#"></a></li>
+						<li class = "block block-gray"><a herf = "#"></a></li>
+						<li class = "block block-red"><a herf = "#"></a></li>
+						<li class = "block block-yellow"><a herf = "#"></a></li>
+						<li class = "block block-green"><a herf = "#"></a></li>
+						<li class = "block block-blue"><a herf = "#"></a></li>
+						<li class = "block block-purple"><a herf = "#"></a></li>
+				</div>
+
+				<nav class="scroll-nav">
+   					<div class="scroll-nav__view">
+     				 	<div class="scroll-nav__list">
+        					<p class="scroll-nav__item on"><a href="#">すべて</a></p>
+        					<p class="scroll-nav__item"><a href="#">お気に入り</a></p>
+        					<p class="scroll-nav__item"><a href="#">アウター</a></p>
+        					<p class="scroll-nav__item"><a href="#">トップス</a></p>
+        					<p class="scroll-nav__item"><a href="#">ボトムス</a></p>
+        					<p class="scroll-nav__item"><a href="#">ワンピース</a></p>
+        					<p class="scroll-nav__item"><a href="#">シューズ</a></p>
+        					<p class="scroll-nav__item"><a href="#">アクセサリー</a></p>
+     					</div>
+    				</div>
+    				<!-- <span class="global-nav--bar"></span> -->
+				</nav>
+			</div>
+		<div class = "cloths">
+  			<!-- <tr>
+    		<th>Id</th><th></th><th></th><th></th>
+  			</tr> -->
+  			  			
+    		<div class = "cloth">
+    			<% @cloths.each do |cloth| %> 
+
+    				<!-- <td><%= cloth.id %></td> -->
+    				<!-- <td><%= image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id =>cloth.id,), :size => "60x80")%></td> -->
+    				<div class="cloth-img">
+    					<%= link_to image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id =>cloth.id)), cloth_path(cloth) %>
+					</div>
+    				<!-- <td><%= link_to 'Show', cloth_path(cloth) %></td> -->
+    				<!-- <td><%= link_to 'Edit', edit_cloth_path(cloth) %></td>
+    				<td><%= link_to 'Delete', cloth_path(cloth), method: :delete %></td> -->
+  				<% end %>	
+    		</div>
+  			
+  		</div>
+  		<footer>
+			<div class = "icon"> 
+				<a herf = "#">
+					<%= image_tag("クローゼット.png")%>
+					<p>クローゼット</p>
+				</a>
+			</div>
+			<div class = "icon">
+				<a herf = "#">
+					<%= image_tag("コーディネート.png")%>
+					<p>コーディネート</p>
+				</a>
+			</div>
+			<div class = "icon">
+				<a herf = "#">
+					<p><%= link_to image_tag("カメラ.png"), new_cloth_path %></p>
+					<p>撮る</p>
+				</a>
+			</div>
+			<div class = "icon">
+				<a herf = "#">
+					<%= image_tag("カレンダー.png")%>
+					<p>カレンダー</p>
+				</a>
+			</div>
+		</footer>
+</table>
