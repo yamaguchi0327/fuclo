@@ -1,0 +1,74 @@
+header{
+	height:8%;
+	width: 100%;
+	background-color: rgb(255,165,0);
+	position: fixed;            /* ヘッダーの固定 */
+    top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+}
+
+.delete{	
+	width: 100%;
+	height: 100%;
+}
+
+.delete {
+	position: fixed;
+	display: block;
+	right: 6px;
+	top: 5px;
+	width: 35px;
+	height: 35px;
+}
+
+.heart{
+	position: fixed;
+	display: block;
+	right: 50px;
+	top: 5px;
+	width: 35px;
+	height: 35px;
+}
+
+.heart a,
+.heart a img,
+.delete img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+.return img{
+	float: left;
+	width: 7%;
+	height: 7%;
+	margin: 3%;
+}
+
+
+.item{
+	width: 100%;
+	height: 100%;
+}
+
+.item img{
+	width: 60%;
+	display: block;
+	margin: 20% auto 10%;
+}
+
+.details{
+	/*border-top: 1.5px solid rgb(255,165,0);*/
+	margin:0 5%;	
+}
+
+.detail{
+	border-bottom: 1.5px solid rgb(255,165,0);
+}
+
+.detail p{
+	font-size: 12px;
+	display:inline-block;
+	margin: 5% 20%;
+}

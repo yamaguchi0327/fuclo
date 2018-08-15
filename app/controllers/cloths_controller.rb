@@ -1,6 +1,14 @@
 class ClothsController < ApplicationController
   def index
-  	@cloths = Cloth.all
+    if params[:color].present? && params[:category].present?
+      @cloths = Cloth.all.where(:color => params[:color],:category => params[:category])
+    elsif params[:color].present?
+  	  @cloths = Cloth.all.where(:color => params[:color])
+    elsif params[:category].present?
+      @cloths = Cloth.all.where(:category => params[:category])
+    else
+      @cloths = Cloth.all
+    end
   end
 
   def show

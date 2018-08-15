@@ -1,45 +1,48 @@
-<h1>Cloths#index</h1>
-<p>Find me in app/views/cloths/index.html.erb</p>
+<!-- <h1>Cloths#index</h1> -->
+<!-- <p>Find me in app/views/cloths/index.html.erb</p> -->
 <!-- <p><%= link_to 'アイテムの登録', new_cloth_path %></p> -->
+
 <table>
 	<div class = "main">
 
-			<div class = "top">
-				<div class = "color">
-					<ul>
-						<li class = "block block-white"><a herf = "#"></a></li>
-						<li class = "block block-black"><a herf = "#"></a></li>
-						<li class = "block block-gray"><a herf = "#"></a></li>
-						<li class = "block block-red"><a herf = "#"></a></li>
-						<li class = "block block-yellow"><a herf = "#"></a></li>
-						<li class = "block block-green"><a herf = "#"></a></li>
-						<li class = "block block-blue"><a herf = "#"></a></li>
-						<li class = "block block-purple"><a herf = "#"></a></li>
-				</div>
-
-				<nav class="scroll-nav">
-   					<div class="scroll-nav__view">
-     				 	<div class="scroll-nav__list">
-        					<p class="scroll-nav__item on"><a href="#">すべて</a></p>
-        					<p class="scroll-nav__item"><a href="#">お気に入り</a></p>
-        					<p class="scroll-nav__item"><a href="#">アウター</a></p>
-        					<p class="scroll-nav__item"><a href="#">トップス</a></p>
-        					<p class="scroll-nav__item"><a href="#">ボトムス</a></p>
-        					<p class="scroll-nav__item"><a href="#">ワンピース</a></p>
-        					<p class="scroll-nav__item"><a href="#">シューズ</a></p>
-        					<p class="scroll-nav__item"><a href="#">アクセサリー</a></p>
-     					</div>
-    				</div>
-    				<!-- <span class="global-nav--bar"></span> -->
-				</nav>
+		<div class = "top">
+			<div class = "color">
+				<ul>
+					<li class = "block block-clear"><%= link_to '', cloths_path(:color => '', :category => params[:category]) %></li>
+					<li class = "block block-white"><%= link_to '', cloths_path(:color => 1,:category => params[:category]) %></li>
+					<li class = "block block-black"><%= link_to '', cloths_path(:color => 0,:category => params[:category]) %></li>
+					<li class = "block block-gray"><%= link_to '', cloths_path(:color => 2,:category => params[:category]) %></li>
+					<li class = "block block-red"><%= link_to '', cloths_path(:color => 3,:category => params[:category]) %></li>
+					<li class = "block block-yellow"><%= link_to '', cloths_path(:color => 4,:category => params[:category]) %></li>
+					<li class = "block block-green"><%= link_to '', cloths_path(:color => 5,:category => params[:category]) %></li>
+					<li class = "block block-blue"><%= link_to '', cloths_path(:color => 6,:category => params[:category]) %></li>
+					<li class = "block block-purple"><%= link_to '', cloths_path(:color => 7,:category => params[:category]) %></li>
 			</div>
-		<div class = "cloths">
-  			<!-- <tr>
-    		<th>Id</th><th></th><th></th><th></th>
-  			</tr> -->
-  			  			
-    		<div class = "cloth">
-    			<% @cloths.each do |cloth| %> 
+
+			<nav class="scroll-nav">
+					<div class="scroll-nav__view">
+ 				 	<div class="scroll-nav__list">
+    					<p class="scroll-nav__item on"><%= link_to '全て', cloths_path(:category => '', :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><a href="#">お気に入り</a></p>
+    					<p class="scroll-nav__item"><%= link_to 'アウター', cloths_path(:category => 0, :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'トップス', cloths_path(:category => 1, :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'ボトムス', cloths_path(:category => 2, :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'ワンピース', cloths_path(:category => 3, :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'シューズ', cloths_path(:category => 4, :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'バッグ', cloths_path(:category => 5, :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'アクセサリー', cloths_path(:category => 6, :color => params[:color]) %></p>
+ 					</div>
+				</div>
+				<!-- <span class="global-nav--bar"></span> -->
+			</nav>
+		</div>
+	<div class = "cloths">
+			<!-- <tr>
+		<th>Id</th><th></th><th></th><th></th>
+			</tr> -->
+			  			
+		<div class = "cloth">
+			<% @cloths.each do |cloth| %> 
 
     				<!-- <td><%= cloth.id %></td> -->
     				<!-- <td><%= image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id =>cloth.id,), :size => "60x80")%></td> -->
@@ -56,7 +59,7 @@
   		<footer>
 			<div class = "icon"> 
 				<a herf = "#">
-					<%= image_tag("クローゼット.png")%>
+					<p><%= link_to image_tag("クローゼット.png"), cloths_url %></p>
 					<p>クローゼット</p>
 				</a>
 			</div>

@@ -1,7 +1,55 @@
-<h1>Cloths#show</h1>
-<p>Find me in app/views/cloths/show.html.erb</p>
-<table>
-  <tr>
-    <td><%= image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id => @cloth.id))%></td></tr>
-</table>
-<p><%= link_to '一覧に戻る', cloths_url %></p>
+<!-- <h1>Cloths#show</h1>
+<p>Find me in app/views/cloths/show.html.erb</p> -->
+<%= form_for(@cloth) do |f| %>
+
+<body>
+	<header>
+		<div class = "return">
+			<%= link_to image_tag("<.png"), cloths_url %>
+		</div>
+
+		<div class = "delete"><%= link_to image_tag("ゴミ箱.png"), cloth_path, :method => :delete, data: {:confirm => 'Are you sure?'}  %></div>
+		<div class = "heart"><%= link_to image_tag("ハート.png"), cloths_url %></div>
+	</header>
+	<div class = "main">
+		<div class = "item">
+			<%= image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id => @cloth.id))%>
+		</div>
+
+		<div class = "details">
+			<div class = "detail">
+				<p>カテゴリー</p>
+			</div>
+			<div class = "detail">
+				<p>カラー</p>
+			</div>
+		</div>
+    </div>
+    <footer>
+	<div class = "icon"> 
+		<a herf = "#">
+			<p><%= link_to image_tag("クローゼット.png"), cloths_url %></p>
+			<p>クローゼット</p>
+		</a>
+	</div>
+	<div class = "icon">
+		<a herf = "#">
+			<%= image_tag("コーディネート.png")%>
+			<p>コーディネート</p>
+		</a>
+	</div>
+	<div class = "icon">
+		<a herf = "#">
+			<p><%= link_to image_tag("カメラ.png"), new_cloth_path %></p>
+			<p>撮る</p>
+		</a>
+	</div>
+	<div class = "icon">
+		<a herf = "#">
+			<%= image_tag("カレンダー.png")%>
+			<p>カレンダー</p>
+		</a>
+	</div>
+</footer>
+</body>
+<% end %>
