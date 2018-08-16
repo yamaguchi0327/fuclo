@@ -1,0 +1,12 @@
+.add-photo {
+	width: 100%;
+	height: 20%;
+	margin-top: 135%;
+	border-top: solid 1px rgba(196,154,196,0.5);
+}
+
+.add-photo img {
+	display: block;
+	width:10%;
+	margin: 5% 0% 5% 10%;
+}

@@ -12,8 +12,8 @@
 
 			<div class = "delete"><%= link_to image_tag("ゴミ箱.png"), cloth_path, :method => :delete, data: {:confirm => 'Are you sure?'}  %>
 			</div>
-			<div class = "heart"><%= link_to image_tag("ハート.png"), cloths_fav_path%>
-			</div>
+			<!-- <div class = "heart"><%= link_to image_tag("ハート.png"), cloths_fav_path%>
+			</div> -->
 		</div>
 	</header>
 
@@ -50,7 +50,7 @@
 	</div>
 	<div class = "icon">
 		<a herf = "#">
-			<%= image_tag("コーディネート.png")%>
+			<p><%= link_to image_tag("コーディネート.png"), cloths_cor_path %></p>
 			<p>コーディネート</p>
 		</a>
 	</div>

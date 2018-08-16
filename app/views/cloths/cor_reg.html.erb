@@ -1,14 +1,16 @@
 <header>
 	<div class = "blue">
-	<div class = "return"><%= link_to image_tag("<.png"), cloths_cal_path %></div>
-  	<div class = "plus"><p><%= link_to image_tag("チェック.png"), cloths_cal_path %></p></div>
+	<div class = "return"><%= link_to image_tag("<.png"), cloths_cor_path %></div>
+
+	<%= button_tag type: :submit do %>
+  		<div class = "unko"><%= image_tag "チェック.png" %></div>
+	<% end %> 
 	</div>
 </header>
-<div class = "fasion"><%= image_tag("fasion.png") %></div>
-<div class = "moredata">
-	<div class = "datas"><p class = "data">8/18 Sat</p><p class = "data">▼</p></div>
-	<!-- <div class = "white-triangle"><%= image_tag("triangletwo.png") %></div> -->
+
+<div class = "add-photo"><%= image_tag("plus-box.png")%>
 </div>
+
 <div class = "back"><%= image_tag("back.png")%></div>
 <footer>
 	<div class = "icon"> 

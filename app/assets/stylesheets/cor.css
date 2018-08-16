@@ -1,0 +1,14 @@
+.corde{
+	width: 90%;
+	height: 100%;
+	margin: 13% 4% 0 8%;
+}
+
+.corde-img{
+	float: left;
+	width: 23%;
+	height:17%;
+	background-color: gray;
+	border: solid 0.5px white;
+	margin: 0;
+}
