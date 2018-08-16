@@ -12,17 +12,89 @@
 	height: 18px;
 }
 
+.file_photo{
+	display: block;
+	position: fixed;
+	top: 90px;
+	text-align: center;
+	/*width: 50px;*/
+}
+
+.settings{
+	position: fixed;
+	margin-top: 20%;
+	right: 20%;
+}
+
 .set{
 	display: block;
 	margin: 20% 10% 0;
 }
 
-.setting{
-	-webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
-	-moz-appearance: none;	/* ベンダープレフィックス(Firefox用) */
-	appearance: none;		/* 標準のスタイルを無効にする */ 
-	height: 10%;
-	width: 70%;			/* ボックスの高さを指定する */
-	padding: 3% 5%;		/* ボックス内側の余白を指定する */
+.triangle-one,
+.triangle-two{
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
+/*.triangle img{
+	position: fixed;
+	width:3%;
+}*/
+
+.triangle-one img{
+	top: 33%;
+	right: 24%;
+	position: fixed;
+	width:3%;
+}
+
+.triangle-two img{
+	top: 48%;
+	right: 24%;
+	position: fixed;
+	width:3%;
+}
+
+.setting {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.setting select {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgba(196,154,196,0.7);
+    border-radius: 5px;
+}
+
+/*label:before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    margin: -2px 0 0 0;
+    border: 5px solid transparent;
+    border-top: 7px solid #f69;
+}*/
+
+select {
+    cursor: pointer;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 200px;
+    padding: 0.5em 1em;
+    color: rgba(196,154,196,0.7);
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+}
+
+::-ms-expand {
+    display: none;
+}

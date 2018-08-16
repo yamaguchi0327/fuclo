@@ -10,17 +10,20 @@
 	</div>
 </header>
 <div class = "set">
-	<div>
-	<%= f.file_field :photo, style: "display:none;"%>
-	</div>
-
-	<div class = "setting">
-		<%= f.label :category %>
-		<%= f.select :category, [["アウター", "0"], ["トップス", "1"],["ボトムス", "2"],["ワンピース", "3"], ["シューズ", "4"], ["バッグ", "5"], ["アクセサリー", "6"]],  :prompt => image_tag(">.png") %>
-	</div>
-	<div class = "setting">
-		<%= f.label :color %>
-		<%= f.select :color, [["黒", "0"], ["白", "1"], ["グレー", "2"], ["赤", "3"], ["黄色", "4"], ["緑", "5"], ["青", "6"], ["紫", "7"]],  :prompt => image_tag(">.png") %>
+	<div class = "settings">
+		<div class = "setting">
+			<div class ="file_photo">
+				<%= f.file_field :photo, style:"background-color:rgba(196,154,196,0.5); width:200px; height: 25px; border-radius: 5px; color:white; paddign-top:10px;" %>
+			</div>
+			<div class = "triangle-one"><%= image_tag "triangle.png" %></div>
+				<%= f.label :category, style: "color:rgba(196,154,196,0.7);" %>
+				<%= f.select :category, [["アウター", "0"], ["トップス", "1"],["ボトムス", "2"],["ワンピース", "3"], ["シューズ", "4"], ["バッグ", "5"], ["アクセサリー", "6"]], :prompt=> "選択してください" %>
+		</div>
+		<div class = "setting">
+			<div class = "triangle-two"><%= image_tag "triangle.png" %></div>
+				<%= f.label :color, style: "color:rgba(196,154,196,0.7);" %>
+				<%= f.select :color, [["黒", "0"], ["白", "1"], ["グレー", "2"], ["赤", "3"], ["黄色", "4"], ["緑", "5"], ["青", "6"], ["紫", "7"]], :prompt=> "選択してください"%>
+		</div>
 	</div>
 </div>
    <!--<%= f.submit 'Submit' %> -->
@@ -47,7 +50,8 @@
 	</div>
 	<div class = "icon">
 		<a herf = "#">
-			<%= image_tag("カレンダー.png")%>
+			<p><%= link_to image_tag("カレンダー.png"), cloths_cal_path %></p>
+			<!-- <%= image_tag("カレンダー.png")%> -->
 			<p>カレンダー</p>
 		</a>
 	</div>

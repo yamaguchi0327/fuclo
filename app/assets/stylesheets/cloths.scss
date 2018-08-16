@@ -138,57 +138,12 @@ ul{
   text-decoration: none;
 }
 
-/* 各メニューのスタイル */
-
-/*.global-nav--bar {
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    width: 15%;
-    height: 2px;
-    background: rgb(255,165,0);
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}*/
-
-/* ホバーでバーの位置を変化 */
-/*.global-nav p:nth-child(1):hover ~ .global-nav--bar {
-    left: 0;
-}
-.global-nav p:nth-child(2):hover ~ .global-nav--bar {
-    left: 25%;
-}
-.global-nav p:nth-child(3):hover ~ .global-nav--bar {
-    left: 50%;
-}
-.global-nav p:nth-child(4):hover ~ .global-nav--bar {
-    left: 75%;
-}
-
-.global-nav p:nth-child(1).current ~ .global-nav--bar {
-    left: 0;
-}
-.global-nav p:nth-child(2).current ~ .global-nav--bar {
-    left: 25%;
-}
-.global-nav p:nth-child(3).current ~ .global-nav--bar {
-    left: 50%;
-}
-.global-nav p:nth-child(4).current ~ .global-nav--bar {
-    left: 75%;
-}*/
-
 .cloths{
 	margin-top: 25%;
 	overflow-y: auto;
 	/*flex-wrap: wrap;*/
 }
 .cloth{
-  	/*margin: 2px;*/
-  	/*float: left;*/
-  	/*height: 2%;
-  	width: 2%;*/
   	display: flex;
   	flex-wrap: wrap;
 }
@@ -221,11 +176,6 @@ ul{
 footer{
 	display: flex;
 	justify-content: space-around;
-	/*background-color: rgb(255,165,0);*/
-	/*background: -webkit-gradient(linear, left top, right bottom, from(#ddd), color-stop(0.25, #ddd), color-stop(0.25, white), color-stop(0.5, white), color-stop(0.5, #ddd), color-stop(0.75, #ddd), color-stop(0.75, white), to(white));
-	background: -moz-linear-gradient(-45deg, #000 25%, white 25%, white 50%, #000 50%, #000 75%, white 75%, white);
-	background: linear-gradient(-45deg, #000 25%, white 25%, white 50%, #000 50%, #000 75%, white 75%, white);
-	background-size: 4px 4px;*/
 	position: fixed;            /* フッターの固定 */
     bottom: 0px;                /* 位置(下0px) */
     left: 0px;                  /* 位置(左0px) */
@@ -264,6 +214,4 @@ footer img{
     width: 110%;
     height: 13%;                 /* 位置(左0px) */
    opacity: 0.5;
-    /*width: 10%;*/
-    /*height: 10vh;*/
 }

@@ -1,0 +1,43 @@
+.fasion{
+	display: block;
+}
+
+.fasion img{
+	margin-top: 30%;
+	margin-left: 15%;
+	width: 70%;
+}
+
+.datas{
+	display: block;
+	width:200px;
+	height: 60px;
+	text-align: center;
+	position: absolute;
+	right: 60px;
+	background-color:rgba(196,154,196,0.5);
+	float: left;
+}
+
+/*.white-triangle{
+	height: 100%;
+	width: 100%;
+	display:block;
+}
+
+.white-triangle img{
+	height: 5%;
+	top: 30px;
+	margin-left: 60px;
+}*/
+
+.data{
+	color:white;
+	float: left;
+	margin-left: 25%;
+}
+
+.moredata{
+	margin-top: 5%;
+}
+

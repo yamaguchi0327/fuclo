@@ -50,10 +50,26 @@ class ClothsController < ApplicationController
     end
   end
 
+  def fav
+  end
+
+  def cal
+  end
+
+  def reg
+  end
+
+  def det
+  end
+
+  def cor
+  end
+
   private
   def cloth_params
  	 params.require(:cloth).permit(:photo, :category, :color)
   end
+
 
 
 end

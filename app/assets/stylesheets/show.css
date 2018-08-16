@@ -6,11 +6,12 @@ header{
     top: 0px;                   /* 位置(上0px) */
     left: 0px;                  /* 位置(右0px) */
     display: flex; 
-    background-image: url("head.png");     
+    background-image: url("/images/head.png");     
 }
 
 .blue{
 	background: rgba(255,255,255,0.5);
+	z-index: 10;
 }
 
 .delete{	
