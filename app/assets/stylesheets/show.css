@@ -1,10 +1,16 @@
 header{
 	height:8%;
 	width: 100%;
-	background-color: rgb(255,165,0);
+	/*background-color: rgb(255,165,0);*/
 	position: fixed;            /* ヘッダーの固定 */
     top: 0px;                   /* 位置(上0px) */
     left: 0px;                  /* 位置(右0px) */
+    display: flex; 
+    background-image: url("head.png");     
+}
+
+.blue{
+	background: rgba(255,255,255,0.5);
 }
 
 .delete{	
@@ -38,11 +44,16 @@ header{
 	height: 100%;
 }
 
+.return{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 
 .return img{
 	float: left;
 	width: 7%;
-	height: 7%;
+	/*height: 20%;*/
 	margin: 3%;
 }
 
@@ -59,16 +70,39 @@ header{
 }
 
 .details{
-	/*border-top: 1.5px solid rgb(255,165,0);*/
-	margin:0 5%;	
+	margin:0 25%;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(196,154,196,0.4);
+	height: 50px;
 }
 
 .detail{
-	border-bottom: 1.5px solid rgb(255,165,0);
+	/*border-bottom: 1.5px solid rgb(255,165,0);*/
+	margin-top:9%;
 }
 
-.detail p{
+/*.detail p{
 	font-size: 12px;
 	display:inline-block;
-	margin: 5% 20%;
+	margin: 5% 5% 5% 20%;
+}*/
+
+.cate{
+	display: block;
+	/*width: 30%;*/
+	margin-left: 10px;
+	padding: 0;
+	font-size: 12px;
+	color: white;
+}
+
+.col{
+
+}
+
+.square{
+	width: 6vw;
+  	height: 6vw;
+  	margin-right: 6%;
 }

@@ -1,15 +1,17 @@
 <%= form_for(@cloth) do |f| %>
+<!-- <div class = "ue"><%= image_tag("head.png")%></div> -->
 <header>
+	<div class = "blue">
 	<div class = "return"><%= link_to image_tag("<.png"), cloths_url %></div>
 
 	<%= button_tag type: :submit do %>
   		<div class = "unko"><%= image_tag "チェック.png" %></div>
 	<% end %> 
-
+	</div>
 </header>
 <div class = "set">
 	<div>
-	<%= f.file_field :photo %>
+	<%= f.file_field :photo, style: "display:none;"%>
 	</div>
 
 	<div class = "setting">
@@ -23,9 +25,9 @@
 </div>
    <!--<%= f.submit 'Submit' %> -->
 <% end %>
-
+<div class = "back"><%= image_tag("back.png")%></div>
 <footer>
-	<div class = "icon"> 
+		<div class = "icon"> 
 		<a herf = "#">
 			<p><%= link_to image_tag("クローゼット.png"), cloths_url %></p>
 			<p>クローゼット</p>

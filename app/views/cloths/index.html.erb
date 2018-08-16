@@ -22,7 +22,7 @@
 			<nav class="scroll-nav">
 					<div class="scroll-nav__view">
  				 	<div class="scroll-nav__list">
-    					<p class="scroll-nav__item on"><%= link_to '全て', cloths_path(:category => '', :color => params[:color]) %></p>
+    					<p class="scroll-nav__item"><%= link_to 'すべて', cloths_path(:category => '', :color => params[:color]) %></p>
     					<p class="scroll-nav__item"><a href="#">お気に入り</a></p>
     					<p class="scroll-nav__item"><%= link_to 'アウター', cloths_path(:category => 0, :color => params[:color]) %></p>
     					<p class="scroll-nav__item"><%= link_to 'トップス', cloths_path(:category => 1, :color => params[:color]) %></p>
@@ -56,7 +56,9 @@
     		</div>
   			
   		</div>
+  		<div class = "back"><%= image_tag("back.png")%></div>
   		<footer>
+
 			<div class = "icon"> 
 				<a herf = "#">
 					<p><%= link_to image_tag("クローゼット.png"), cloths_url %></p>

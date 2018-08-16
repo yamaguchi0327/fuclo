@@ -3,14 +3,20 @@
 <%= form_for(@cloth) do |f| %>
 
 <body>
+	<!-- <div class = "ue"><%= image_tag("head.png")%></div> -->
 	<header>
-		<div class = "return">
-			<%= link_to image_tag("<.png"), cloths_url %>
-		</div>
+		<div class = "blue">
+			<div class = "return">
+				<%= link_to image_tag("<.png"), cloths_url %>
+			</div>
 
-		<div class = "delete"><%= link_to image_tag("ゴミ箱.png"), cloth_path, :method => :delete, data: {:confirm => 'Are you sure?'}  %></div>
-		<div class = "heart"><%= link_to image_tag("ハート.png"), cloths_url %></div>
+			<div class = "delete"><%= link_to image_tag("ゴミ箱.png"), cloth_path, :method => :delete, data: {:confirm => 'Are you sure?'}  %>
+			</div>
+			<div class = "heart"><%= link_to image_tag("ハート.png"), cloths_url %>
+			</div>
+		</div>
 	</header>
+
 	<div class = "main">
 		<div class = "item">
 			<%= image_tag(url_for(:controller=> 'cloths', :action => 'send_img', :id => @cloth.id))%>
@@ -18,13 +24,23 @@
 
 		<div class = "details">
 			<div class = "detail">
-				<p>カテゴリー</p>
+				<!-- <p>カラー</p> -->
+				<div class = "col">
+					<% col = ["black", "white", "#c0c0c0", "#ff6969", "#f9bf4b", "#44d37e", "#6ec4ff", "#b8b2ea"] %>
+					<div class="square" style="background-color: <%=col[@cloth.color]; %>" ></div>
+				</div>
 			</div>
 			<div class = "detail">
-				<p>カラー</p>
+				<!-- <p>カテゴリー</p> -->
+				<div class = "cate">
+					<% cate = ["アウター", "トップス", "ボトムス", "ワンピース", "シューズ", "バッグ", "アクセサリー"] %>
+					<%= cate[@cloth.category] %>
+			 	</div>
 			</div>
+			
 		</div>
     </div>
+    <div class = "back"><%= image_tag("back.png")%></div>
     <footer>
 	<div class = "icon"> 
 		<a herf = "#">
